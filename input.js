@@ -35,7 +35,17 @@ const handleUserInput = function(conn) {
     if (key === 'd') {
       conn.write("Move: right");
     }
+    if (key === '0') {
+      conn.write(`Say: hello`);
+    }
+    if (key === '9') {
+      conn.write(`Say: great day to code`);
+    }
+    if (key === '8') {
+      conn.write(`Say: race you!`);
+    }
   });
 };
+
 
 module.exports = { setupInput };
