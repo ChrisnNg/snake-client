@@ -7,17 +7,15 @@ const stdin = process.stdin;
 stdin.setRawMode(true);
 stdin.setEncoding('utf8');
 
-let connection;
+
 
 const setupInput = function(conn) {
-  connection = conn;
   stdin.resume();
   handleUserInput(conn);
   return stdin;
 };
 
 const handleUserInput = function(conn) {
-  connection = conn;
   stdin.on('data', (key) => {
     if (key === '\u0003') {
       console.log("Thanks for using me, buhbye!");
