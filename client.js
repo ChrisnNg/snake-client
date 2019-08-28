@@ -18,6 +18,8 @@ const connect = function() {
   });
   conn.on('connect', () => {
     conn.write('Name: Cng');
+    // conn.write('Move: up');
+    // setTimeout(conn.write('Move: right'), 2000);
   });
   return conn;
 };
